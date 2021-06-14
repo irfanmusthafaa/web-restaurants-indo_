@@ -1,38 +1,42 @@
 * {
     padding: 0;
     margin: 0;
-  }
-   
-  body {
+}
+
+body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
-   
-   /*skip to link*/
+}
+
+
+/*skip to link*/
+
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: #14274e;
-  color: white;
-  text-decoration: none;
-  padding: 8px;
-  z-index: 100;
-  font-size: 16px;
-  font-weight: 500;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #14274e;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    z-index: 100;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .skip-link:focus {
-  top: 0;
+    top: 0;
 }
-  /*
+
+
+/*
     AppBar
   */
-   
-  .app-bar {
+
+.app-bar {
     padding: 8px 16px;
     background-color: #14274e;
     display: grid;
@@ -42,39 +46,39 @@
     top: 0;
     z-index: 99;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  }
-   
-  .app-bar .app-bar__menu {
+}
+
+.app-bar .app-bar__menu {
     display: flex;
     align-items: center;
-  }
+}
 
-  #hamburgerButton{
+#hamburgerButton {
     color: white;
     font-size: 44px;
-  }
-   
-  .app-bar .app-bar__menu button {
+}
+
+.app-bar .app-bar__menu button {
     background-color: transparent;
     border: none;
     font-size: 18px;
     padding: 8px;
     cursor: pointer;
-  }
-   
-  .app-bar .app-bar__brand {
+}
+
+.app-bar .app-bar__brand {
     display: flex;
     align-items: center;
-  }
-   
-  .app-bar .app-bar__brand h1 {
+}
+
+.app-bar .app-bar__brand h1 {
     color: #f1f6f9;
     text-transform: uppercase;
     font-size: 22px;
     user-select: none;
-  }
-   
-  .app-bar .app-bar__navigation {
+}
+
+.app-bar .app-bar__navigation {
     position: absolute;
     top: 50px;
     left: -180px;
@@ -83,13 +87,13 @@
     padding: 8px;
     background-color: #14274e;
     overflow: hidden;
-  }
-   
-  .app-bar .app-bar__navigation.open {
+}
+
+.app-bar .app-bar__navigation.open {
     left: 0;
-  }
-   
-  .app-bar .app-bar__navigation ul li a {
+}
+
+.app-bar .app-bar__navigation ul li a {
     display: inline-block;
     text-decoration: none;
     color: #f1f6f9;
@@ -98,19 +102,19 @@
     padding: 8px;
     margin-bottom: 5px;
     width: 100%;
-  }
+}
 
 
-  /* JUMBOTRON */
+/* JUMBOTRON */
 
-  .jumbotron {
+.jumbotron {
     display: flex;
     align-items: center;
     width: 100%;
     min-height: 600px;
     width: 100%;
     text-align: center;
-    background-image: url("/hero/hero-image_4.jpg");
+    background-image: url("../public/images/heros/hero-image_4.jpg");
     background-position: center;
     background-color: #aaaaaa;
     background-size: cover;
@@ -119,83 +123,84 @@
     background-repeat: no-repeat;
     object-fit: center;
     object-position: center;
-  }
-  
-  .jumbotron__wrap {
+}
+
+.jumbotron__wrap {
     max-width: 58%;
     margin: 0 auto;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .jumbotron__title {
+}
+
+.jumbotron__title {
     margin-top: 18px;
     color: white;
     font-size: 38px;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  
-  .jumbotron__tagline {
+}
+
+.jumbotron__tagline {
     margin-top: 18px;
     margin-bottom: 18px;
     color: white;
     font-size: 20px;
     font-weight: 300;
     padding: 10px 20px;
-  }
+}
 
-  /*
+
+/*
     Main Content
   */
-   
-  main {
+
+main {
     padding: 32px;
     flex: 1;
-  }
-   
-  .content {
+}
+
+.content {
     margin: 0 auto;
     min-height: 100%;
-  }
-   
-  .content .content__heading {
+}
+
+.content .content__heading {
     font-weight: normal;
-  }
-   
-   
-  /*
+}
+
+
+/*
     Movies
   */
-   
-  .restaurants {
+
+.restaurants {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     margin: 32px 0;
-  }
-   
-   
-  /*
+}
+
+
+/*
     Movie Item
   */
-   
-  .restaurant-item {
+
+.restaurant-item {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
-  }
-   
-  .restaurant-item__header {
+}
+
+.restaurant-item__header {
     position: relative;
-  }
-   
-  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
     width: 100%;
-  }
-   
-  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
     position: absolute;
     padding: 8px;
     bottom: 20px;
@@ -203,91 +208,90 @@
     display: inline-block;
     background-color: black;
     color: white;
-  }
-   
-  .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
     margin-left: 10px;
-  }
-   
-  .restaurant-item .restaurant-item__content {
+}
+
+.restaurant-item .restaurant-item__content {
     padding: 16px;
-  }
-   
-  .restaurant-item .restaurant-item__content h3 {
+}
+
+.restaurant-item .restaurant-item__content h3 {
     margin: 0 0 10px 0;
-  }
-   
-  .restaurant-item .restaurant-item__content h3 a {
+}
+
+.restaurant-item .restaurant-item__content h3 a {
     color: #14274e;
     text-decoration: none;
     font-size: 25px;
     display: block;
     height: 44px;
-    
-  }
-   
-  .restaurant-item .restaurant-item__content p {
+}
+
+.restaurant-item .restaurant-item__content p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
     -webkit-box-orient: vertical;
-  }
-   
-   
-  /*
+}
+
+
+/*
     Restaurant
   */
-   
-  .restaurant {
+
+.restaurant {
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 18px 16px;
-  }
-   
-  .restaurant .restaurant__poster {
+}
+
+.restaurant .restaurant__poster {
     width: 100%;
     max-width: 400px;
-  }
-   
-  .restaurant .restaurant__info h4 {
+}
+
+.restaurant .restaurant__info h4 {
     margin: 8px 0;
     text-align: left;
-  }
+}
 
-  .restaurant__overview p,h5{
-      margin : 8px 0;
-  }
-   
-   
-   
-  /*
+.restaurant__overview p,
+h5 {
+    margin: 8px 0;
+}
+
+
+/*
     Footer
   */
-   
-  footer {
+
+footer {
     padding: 16px;
-  
-  }
-   
-  footer p {
-    
+}
+
+footer p {
     text-align: center;
     color: #aaaaaa;
-  }
-   
-  footer p a {
+}
+
+footer p a {
     color: #14274e;
     text-decoration: none;
-  
-  }
+}
 
-  /*
+
+/*
    Like
 */
+
 .like {
     font-size: 18px;
     position: fixed;

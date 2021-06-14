@@ -1,5 +1,5 @@
 import CONFIG from '../../globals/config';
- 
+
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.name}</h2>
   <img class="restaurant__poster" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
@@ -23,7 +23,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h5>${restaurant.customerReviews.map((dates) => dates.date)}</h5>
   </div>
 `;
- 
+
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
     <div class="restaurant-item__header">
@@ -40,13 +40,13 @@ const createRestaurantItemTemplate = (restaurant) => `
   </div>
   `;
  
-  const createLikeButtonTemplate = () => `
+  const createLikeRestaurantButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
  
-const createLikedButtonTemplate = () => `
+const createUnlikeRestaurantButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
@@ -55,7 +55,7 @@ const createLikedButtonTemplate = () => `
 export { 
     createRestaurantItemTemplate,
     createRestaurantDetailTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate
+    createLikeRestaurantButtonTemplate,
+    createUnlikeRestaurantButtonTemplate
 
 };
