@@ -9,7 +9,7 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
     },
 });
 
-const FavoriteRestaurantIdb = {
+const FavoriteRestaurants = {
     async getRestaurant(id) {
         if (!id) {
             return;
@@ -30,6 +30,19 @@ const FavoriteRestaurantIdb = {
     async deleteRestaurant(id) {
         return (await dbPromise).delete(OBJECT_STORE_NAME, id);
     },
+
+    async searchRestaurants(query) {
+        return (await this.getAllRestaurants()).filter((restaurant) => {
+            const loweredCaseRestaurantTitle = (restaurant.title || '-').toLowerCase();
+            const jammedRestaurantTitle = loweredCaseRestaurantTitle.replace(/\s/g, '');
+
+            const loweredCaseQuery = query.toLowerCase();
+            const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+
+            return jammedRestaurantTitle.indexOf(jammedQuery) !== -1;
+        });
+
+    },
 };
 
-export default FavoriteRestaurantIdb;
+export default FavoriteRestaurants;
