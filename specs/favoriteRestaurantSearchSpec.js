@@ -58,29 +58,6 @@ describe('Searching restaurants', () => {
             expect(document.querySelectorAll('.restaurant-item').length)
                 .toEqual(2);
         });
-
-        // it('should show the title of the found restaurants', () => {
-        //     presenter._showFoundRestaurants([{
-        //         id: 1,
-        //         title: 'Satu',
-        //     }]);
-        //     expect(document.querySelectorAll('.restaurant__title')
-        //             .item(0).textContent)
-        //         .toEqual('Satu');
-        // });
-
-        // it('should show - when the restaurant returned does not contain a title', (done) => {
-        //     document.getElementById('restaurants').addEventListener('restaurants:updated', () => {
-        //         const restaurantTitles = document.querySelectorAll('.restaurant__title');
-        //         expect(restaurantTitles.item(0).textContent).toEqual('-');
-
-        //         done();
-        //     });
-        //     favoriteRestaurants.searchRestaurants.withArgs('restaurant a').and.returnValues([
-        //         { id: 444 },
-        //     ]);
-        //     searchRestaurants('restaurant a');
-        // });
     });
 
     describe('When query is empty', () => {

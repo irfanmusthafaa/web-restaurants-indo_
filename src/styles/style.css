@@ -114,7 +114,7 @@ body {
     min-height: 600px;
     width: 100%;
     text-align: center;
-    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-image: url("../public/images/hero-large.jpg");
     background-position: center;
     background-color: #aaaaaa;
     background-size: cover;
@@ -123,6 +123,12 @@ body {
     background-repeat: no-repeat;
     object-fit: center;
     object-position: center;
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron {
+        background-image: url("../images/hero-small.jpg");
+    }
 }
 
 .jumbotron__wrap {
