@@ -3,6 +3,19 @@
     margin: 0;
 }
 
+:root {
+    --primary-color: #26327f;
+    --font-color: #000000;
+    --font-color-invers: #ffffff;
+    --bg-color: #ffffff;
+    --side-nav-color: linear-gradient(180deg, #26327f 0%, #e8eddf 100%);
+    --table-color: #000000;
+    --box-shadow: #00000033;
+    --card-header-bg-color: #26327fa8;
+    --btn: #26327f;
+    --btn-hover: #131d5a;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
@@ -55,7 +68,10 @@ body {
 
 #hamburgerButton {
     color: white;
-    font-size: 44px;
+    font-size: 25px;
+    display: block;
+    height: 44px;
+    width: 44px;
 }
 
 .app-bar .app-bar__menu button {
@@ -74,7 +90,7 @@ body {
 .app-bar .app-bar__brand h1 {
     color: #f1f6f9;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 15px;
     user-select: none;
 }
 
@@ -97,7 +113,8 @@ body {
     display: inline-block;
     text-decoration: none;
     color: #f1f6f9;
-    font-size: 30px;
+    font-size: 25px;
+    display: block;
     height: 44px;
     padding: 8px;
     margin-bottom: 5px;
@@ -114,7 +131,7 @@ body {
     min-height: 600px;
     width: 100%;
     text-align: center;
-    background-image: url("../public/images/hero-large.jpg");
+    background-image: url("/images/hero-large.jpg");
     background-position: center;
     background-color: #aaaaaa;
     background-size: cover;
@@ -125,9 +142,90 @@ body {
     object-position: center;
 }
 
+
+/* DETAIL MENU */
+
+.detail-menu h4 {
+    font-weight: bold;
+    font-size: 1.37em;
+    padding: 1em;
+    background-color: var(--bg-color);
+}
+
+.detail-food {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+
+.detail-food li {
+    padding: 0.5em 0;
+    display: block;
+    text-decoration: none;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--table-color);
+    border-width: 0 0 0.5px;
+}
+
+.detail-drink {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+
+.detail-drink li {
+    padding: 0.5em 0;
+    display: block;
+    text-decoration: none;
+    background-color: var(--bg-color);
+    border: 0.5px solid var(--table-color);
+    border-width: 0 0 0.5px;
+}
+
+
+/* DETAIL REVIEW */
+
+.detail-review {
+    max-width: 100%;
+    font-size: 1em;
+    text-align: center;
+}
+
+.detail-review-item {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    box-shadow: 1px 2px 4px 2px var(--box-shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+    color: var(--font-color-invers);
+    background-color: var(--table-color);
+}
+
+.review-name {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.review-date {
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+.review-body {
+    padding: 1.5em;
+}
+
 @media screen and (max-width: 600px) {
     .jumbotron {
-        background-image: url("../images/hero-small.jpg");
+        background-image: url("/images/hero-small.jpg");
     }
 }
 
@@ -141,7 +239,7 @@ body {
 .jumbotron__title {
     margin-top: 18px;
     color: white;
-    font-size: 38px;
+    font-size: 25px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -202,9 +300,19 @@ main {
     position: relative;
 }
 
+.restaurant-item__header__poster:before {
+    content: ' ';
+    display:block;
+    height: 200px;
+    width: 300px;
+    background-image: url('/icons/placeholder-img.png');
+}
+
 .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
     width: 100%;
 }
+
+
 
 .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
     position: absolute;
@@ -234,6 +342,14 @@ main {
     font-size: 25px;
     display: block;
     height: 44px;
+}
+
+.restaurant__name {
+    color:black;
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
 }
 
 .restaurant-item .restaurant-item__content p {
@@ -274,6 +390,12 @@ h5 {
     margin: 8px 0;
 }
 
+.input-query {
+    /* display: block; */
+    height: 44px;
+    display: none;
+}
+
 
 /*
     Footer
@@ -281,16 +403,22 @@ h5 {
 
 footer {
     padding: 16px;
+    display: block;
+    height: 44px;
 }
 
 footer p {
     text-align: center;
     color: #aaaaaa;
+    display: block;
+    height: 44px;
 }
 
 footer p a {
     color: #14274e;
     text-decoration: none;
+    display: block;
+    height: 44px;
 }
 
 
