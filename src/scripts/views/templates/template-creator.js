@@ -3,9 +3,10 @@ import CONFIG from '../../globals/config';
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.name}</h2>
   <h3 class="restaurant__title">${restaurant.city}</h3>
-  <img class="restaurant__poster lazyload" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+  <img class="restaurant__poster lazyload" alt="${restaurant.name}" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
   <div class="restaurant__info">
   <h3>Information</h3>
+  <p>${restaurant.description}</p>
     <h4>Alamat</h3>
     <p>${restaurant.address}, ${restaurant.city} </p>
     <h4>Rating</h4>
@@ -14,7 +15,6 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.categories.map((category) => category.name).join(' - ')}</p>
     
   </div>
-
   <h3>Menu</h3>
   <div class="detail-menu grid-2">
     <div class="detail-food">
